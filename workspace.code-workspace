@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../NPGC"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "NPGC"
+	}
+}
