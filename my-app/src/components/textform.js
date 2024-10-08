@@ -8,9 +8,11 @@ export default function Textform(props) {
   }
   function toUppercase(){
     settext(text.toUpperCase())
+    props.alertMsg('text converted to UpperCase','success');
   }
   function tolowercase(){
     settext(text.toLowerCase())
+    props.alertMsg('text converted to LowerCase','success');
   }
   function toclear(){
     settext('')

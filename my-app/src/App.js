@@ -9,11 +9,14 @@ function App() {
   const [mode, setMode] = useState('light');
   const [alertmsg, setAlertmsg] = useState(null);
 
-  const alert=(message,type)=>{
+  const alertMsg=(message,type)=>{
     setAlertmsg({
       msg : message,
       type : type
     })
+    setTimeout(() => {
+      setAlertmsg(null);
+    }, 2000);
   }
 
   const theme=()=>{
@@ -21,12 +24,12 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor='#181818';
       document.body.style.color='white';
-      alert('dark mode enabled','success')
+      alertMsg('dark mode enabled','success')
     }
     else{
       setMode('light');
       document.body.style.backgroundColor='white';
-      alert('light mode enabled','primary')
+      alertMsg('light mode enabled','primary')
     }
   }
 
@@ -35,8 +38,8 @@ function App() {
     <Navbar name = 'Text.Uitls' section = 'About us' mode = {mode} theme={theme}/>
     <div className="container">
       <Alert alertmsg={alertmsg}/>
-    <AboutUs mode={mode}/>
-    <Textform mode={mode}/>
+
+      <Textform alertMsg={alertMsg} mode={mode}/>
     </div>
     </>
   ); 
