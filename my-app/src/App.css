@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+#theme-red,#theme-blue,#theme-green{
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  
+}
+#theme-red{
+  background-color: #ff0000;
+}
+#theme-blue{
+  background-color: #000080;
+}
+#theme-green{
+  background: #0d482d;
+}

@@ -33,6 +33,13 @@ export default function Navbar(props) {
               </a>
             </li>
           </ul>
+          <div id="theme-red" className="mx-2" onClick={props.themeRed}>
+          </div>
+          <div id="theme-blue"className="mx-2" onClick={props.themeBlue}>
+          </div>
+          <div id="theme-green" className="mx-2" onClick={props.themeGreen}>
+          </div>
+
           <div className="form-check form-switch">
             <input
               className="form-check-input"
@@ -43,7 +50,7 @@ export default function Navbar(props) {
             />
             <label
               className={`form-check-label text-${
-                props.mode == "light" ? "dark" : "light"
+                props.mode === "light" ? "dark" : "light"
               }`}
               htmlFor="flexSwitchCheckDefault"
             >
